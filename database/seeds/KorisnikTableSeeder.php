@@ -14,7 +14,7 @@ class KorisnikTableSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 0; $i < GrupaTableSeeder::$grupe; $i++) {
+        for ($i = 0; $i < 20; $i++) {
 
             $grupa_id = rand(1, GrupaTableSeeder::$grupe);
             DB::table('korisnik')->insert([

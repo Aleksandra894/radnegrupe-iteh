@@ -65984,13 +65984,10 @@ var Grupa = /*#__PURE__*/function (_Component) {
         };
         var korisnici = _this3.state.korisnici;
         korisnici.push(korisnik);
-        console.log(_this3.state.korisnici);
 
         _this3.setState({
           korisnici: korisnici
         });
-
-        console.log(_this3.state.korisnici);
       });
     }
   }, {
@@ -66065,11 +66062,11 @@ var Grupa = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-2"
       }, naziv), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-2"
+        className: "col-3"
       }, tip), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-2"
       }, broj_prijavljenih), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-2"
+        className: "col-4"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         onClick: this.prikaziGrupu,
         className: "btn btn-block btn-secondary "
@@ -66197,7 +66194,7 @@ var Grupe = /*#__PURE__*/function (_Component) {
       }, "TIP GRUPE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-2 h4 "
       }, "UCLANJENO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-2 h4 "
+        className: "col-4 h4 "
       }, "AKCIJE"), this.prikaziGrupe()));
     }
   }]);
@@ -66394,8 +66391,8 @@ if (document.getElementById("korisnik")) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Mata\Desktop\laravelReact\radnegrupe\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Mata\Desktop\laravelReact\radnegrupe\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Mata\Desktop\laravelReact\sandra_temp\radnegrupe-iteh\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Mata\Desktop\laravelReact\sandra_temp\radnegrupe-iteh\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

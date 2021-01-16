@@ -12,7 +12,7 @@ export default class Grupe extends Component {
     }
 
     ucitajGrupe() {
-        axios.get(this.url + "grupe/get").then((res) => {
+        axios.get(this.url + "grupe/get").then(res => {
             const grupe = res.data.grupe;
             this.setState({ grupe });
         });
@@ -20,7 +20,7 @@ export default class Grupe extends Component {
 
     prikaziGrupe() {
         let grupe = this.state.grupe;
-        return grupe.map((grupa) => {
+        return grupe.map(grupa => {
             return <Grupa key={grupa.id} grupa={grupa} />;
         });
     }
@@ -32,7 +32,8 @@ export default class Grupe extends Component {
                     <div className="col-2 h4 ">NAZIV</div>
                     <div className="col-2 h4 ">TIP GRUPE</div>
                     <div className="col-2 h4 ">UCLANJENO</div>
-                    <div className="col-2 h4 ">AKCIJE</div>
+                    <div className="col-4 h4 ">AKCIJE</div>
+
                     {this.prikaziGrupe()}
                 </div>
             </div>

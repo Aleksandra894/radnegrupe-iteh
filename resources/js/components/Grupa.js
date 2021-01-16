@@ -11,7 +11,7 @@ export default class Grupa extends Component {
             prikazi: false,
             uclanjenje: false,
             novoIme: "",
-            noviEmail: "",
+            noviEmail: ""
         };
         this.url = "http://127.0.0.1:8000/";
         this.prikaziGrupu = this.prikaziGrupu.bind(this);
@@ -25,7 +25,7 @@ export default class Grupa extends Component {
     ucitajKorisnike() {
         axios
             .get(this.url + "korisnik/get?id=" + this.state.grupa.id)
-            .then((res) => {
+            .then(res => {
                 const korisnici = res.data.korisnici;
                 this.setState({ korisnici });
             });
@@ -45,7 +45,7 @@ export default class Grupa extends Component {
                         </div>
                     </div>
                 );
-            return this.state.korisnici.map((korisnik) => {
+            return this.state.korisnici.map(korisnik => {
                 return <Korisnik key={korisnik.id} korisnik={korisnik} />;
             });
         }
@@ -61,23 +61,21 @@ export default class Grupa extends Component {
             .post(this.url + "korisnik/dodaj", {
                 ime_korisnik: this.state.novoIme,
                 email_korisnik: this.state.noviEmail,
-                grupa_id: this.state.grupa.id,
+                grupa_id: this.state.grupa.id
             })
-            .then((res) => {
+            .then(res => {
                 let korisnik = {
                     id: res.data.id,
                     ime_korisnik: this.state.novoIme,
                     email_korisnik: this.state.noviEmail,
-                    grupa_id: this.state.grupa.id,
+                    grupa_id: this.state.grupa.id
                 };
 
                 let korisnici = this.state.korisnici;
 
                 korisnici.push(korisnik);
-                console.log(this.state.korisnici);
 
                 this.setState({ korisnici: korisnici });
-                console.log(this.state.korisnici);
             });
     }
 
@@ -143,9 +141,9 @@ export default class Grupa extends Component {
             <div className="container">
                 <div className="row justify-content-center rounded bg-info h5">
                     <div className="col-2">{naziv}</div>
-                    <div className="col-2">{tip}</div>
+                    <div className="col-3">{tip}</div>
                     <div className="col-2">{broj_prijavljenih}</div>
-                    <div className="col-2">
+                    <div className="col-4">
                         <button
                             onClick={this.prikaziGrupu}
                             className="btn btn-block btn-secondary "
